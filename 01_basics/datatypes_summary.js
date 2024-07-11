@@ -42,16 +42,16 @@ const myfunction = function(){
 //console.log(typeof bignumber);
 //null ka typeof se data type --> "object" hoga
 // undefined ka typeof se data type --> undefined hoga
-console.log(typeof score);
-console.log(typeof scorevalue);
-console.log(typeof isloggedin);
-console.log(typeof outsidetemp);
-console.log(typeof id);
-console.log(typeof id2);
-console.log(typeof bignumber);
-console.log(typeof heroes);
-console.log(typeof myobj);
-console.log(typeof myfunction);
+// console.log(typeof score);
+// console.log(typeof scorevalue);
+// console.log(typeof isloggedin);
+// console.log(typeof outsidetemp);
+// console.log(typeof id);
+// console.log(typeof id2);
+// console.log(typeof bignumber);
+// console.log(typeof heroes);
+// console.log(typeof myobj);
+// console.log(typeof myfunction);
 /*
 Return type of variables in JavaScript
 1) Primitive Datatypes
@@ -67,5 +67,50 @@ Return type of variables in JavaScript
        Function  =>  function
        Object  =>  object
 */
+
+
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//2 types of memory - stack and heap
+//stack (primitive); heap(non-Primitive)
+//stack me variable declare ka copy miltahai
+//heap me reference milta 
+
+let myYoutubeName = "anaghjaiswardot.com"
+
+let anothername = myYoutubeName
+anothername = "chai aur code"
+
+
+console.log(myYoutubeName);
+console.log(anothername);
+
+let user_one = {
+    email: "user@googgle.com",
+    upi : "nvfdj@oksbi"
+}
+
+let user_two = user_one
+
+user_two.email = "anagh@google.com"
+
+console.log(user_one.email);
+console.log(user_two.email);
+/*
+//datatypes are based on memory allocation
+Primitive datatypes->  call by value (string,number,boolean,null,undefined,BigInt,symbol) ->Stack memory
+
+Reference/Non primitive data types -> call by reference ( array,object, function) -> heap memory
+
+JavaScript is a dynamically typed language. This means that you don't need to specify the data type of a variable when you declare it.
+ */
+//jitni bhi primittive values hoti hai jaise number,boolean yeh sab jaati hai stack ke andar aur stack ke andar hame inka copy hi milta hai 
+//lekin heap ke andar kuch  bhi values rakhte hai toh hame inka reference hi milta ha 
+//reference se matlab jo bhi changes ham karte hai woh original alues ke andar hi karte hai
+
+
+
+
 
 
