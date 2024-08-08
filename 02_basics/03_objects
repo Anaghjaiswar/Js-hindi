@@ -1,0 +1,52 @@
+//singleton
+//jab ham literals ki tarah declare karte hai toh singleton nahi banta hai, constructor se agar banega toh hamesa singleton banega
+
+//object literals
+
+const mySym = Symbol("key1")
+
+//Object.create
+
+
+const JsUser = {   // this is a object literal declaration
+    name: "Anagh",
+    "full name": "Anagh Jaiswar",
+    age : 20,
+    //if you want to use symbol as a key then you can not do it directly bcz it will be treated as a string.You have to do like :-
+    [mySym]: "mykey1",
+    location : "pilibhit",
+    email: "jaiswaranagh@gmail.com",
+    isLoggedin: false,
+    LastLoginDays: ["Monday", "Saturday"]
+}
+
+console.log(JsUser.email);
+console.log(JsUser["email"]);
+//you need to know both methods of accessing JSuser object value pairs bcz their is no way to access "full name" using 1st method.
+console.log(JsUser["full name"]);
+console.log(JsUser[mySym]);
+console.log(typeof JsUser[mySym]);//string yeh mykey1 ki baat kar raha hai
+console.log(typeof mySym);//symbol
+
+//if you want to change values inside object
+JsUser.email = "anaghjaiswar2004@gmail.com"//equal(=) sign is used here
+
+//if you want no one could change the value then you lock/freeze
+
+//Object.freeze(JsUser) //Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
+
+JsUser.email = "hello123@gmail.com"
+
+//console.log(JsUser);
+
+
+JsUser.greetings = function(){
+    console.log("hello JS user");
+}
+
+JsUser.greetingsTwo = function(){
+    console.log(`hello JS user, ${this.name}`);// this lagake object ke anadar jo bhi properties woh sab aapko mil jayengi
+}
+
+console.log(JsUser.greetings());
+console.log(JsUser.greetingsTwo());
