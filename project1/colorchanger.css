@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.canvas{
+    height: 700px;
+    width : 550px;
+    border-radius: 15px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.button{
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    margin: 2px;
+}
+#blue{
+    background-color: blue;
+}
+#green{
+    background-color: green;
+}
+#yellow{
+    background-color: yellow;
+}
+#red{
+    background-color: red;
+}
+#brown{
+    background-color: brown;
+}
+#grey{
+    background-color: grey;
+}
+#pink{
+    background-color: pink;
+}
+#cyan{
+    background-color: cyan;
+}
+#purple{
+    background-color: purple;
+}
+#orange{
+    background-color: orange;
+}
